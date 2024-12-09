@@ -59,8 +59,4 @@ select
 	AVG(OrderAmount) over(partition by customerCity) as AverageOrderAmount,
 	Min(OrderAmount) over(partition by customerCity) as MinimumOrderAmount,
 	Max(OrderAmount) over(partition by customerCity) as MaxOrderAmount
-from orders 
-	
-
-
-	update orders set customerCity = 'Hosiarpur' where customerCity = 'Hyderabad'
+from orders order by CustomerCity	
